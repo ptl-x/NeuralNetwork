@@ -2,7 +2,6 @@ import numpy as np
 
 class NeuralNetwork(object):
 
-
   #constructor sets up hidden layers and network nodes
   def __init__(self, inputs, hidden_layers, outputs):
     

@@ -1,16 +1,18 @@
 import numpy as np
 
-#seed the neural net for consistency in testing
-np.random.seed(1)
-
-
 class NeuralNetwork(object):
 
 
   #constructor sets up hidden layers and network nodes
   def __init__(self, inputs, hidden_layers, outputs):
+    
+    #seed the neural net for consistency in testing
+    np.random.seed(1)
+
+    #create space for the layers
     self.layers = [None] * (len(hidden_layers) + 1)
 
+    #generate the layers
     for i in range(len(self.layers)):
       if(i == 0):
          self.layers[0] = 2 * np.random.random((inputs, hidden_layers[i])) - 1
@@ -19,6 +21,7 @@ class NeuralNetwork(object):
       else:
          self.layers[i] = 2 * np.random.random((hidden_layers[i - 1], hidden_layers[i])) - 1
 
+    #show the layers
     for layer in self.layers:
       print(layer, "\n")
 

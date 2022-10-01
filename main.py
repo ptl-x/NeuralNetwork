@@ -1,5 +1,5 @@
 from neuralNet import NeuralNetwork
-imports numpy as np
+import numpy as np
 
 #create a network with 3 inputs, 3 hidden layers (the first with 5 nodes
 #the second with 5 nodes, and the third with 3 nodes), and a single output 
